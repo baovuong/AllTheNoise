@@ -5,7 +5,6 @@ MainComponent::MainComponent()
 {
     // Make sure you set the size of the component after
     // you add any child components.
-    setSize (800, 600);
     
     addAndMakeVisible(colorSlider);
     colorSlider.setRange(0, 5, 1);
@@ -29,6 +28,7 @@ MainComponent::MainComponent()
     ampLabel.attachToComponent(&ampSlider, false);
     ampLabel.setJustificationType(juce::Justification::centred);
 
+    setSize (800, 600);
 
     // Some platforms require permissions to open input channels so request that here
     if (juce::RuntimePermissions::isRequired (juce::RuntimePermissions::recordAudio)
@@ -40,7 +40,7 @@ MainComponent::MainComponent()
     else
     {
         // Specify the number of input and output channels that we want to open
-        setAudioChannels (2, 2);
+        setAudioChannels (0, 2);
     }
 }
 
@@ -61,20 +61,31 @@ void MainComponent::prepareToPlay (int samplesPerBlockExpected, double sampleRat
 
     // For more details, see the help for AudioProcessor::prepareToPlay()
 
-    visualizer.clear();
+    //visualizer.clear();
+    juce::String message;
+    message << "Preparing to play audio...\n";
+    message << "samplesPerBlockExpected = " << samplesPerBlockExpected << "\n";
+    message << "sampleRate = " << sampleRate;
+    juce::Logger::getCurrentLogger()->writeToLog(message);
 }
 
 void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& bufferToFill)
 {
     // Your audio-processing code goes here!
+    auto level = (float) ampSlider.getValue();
 
-    // For more details, see the help for AudioProcessor::getNextAudioBlock()
+    for (auto channel = 0; channel < bufferToFill.buffer->getNumChannels(); ++channel)
+    {
+        auto *buffer = bufferToFill.buffer->getWritePointer(channel, bufferToFill.startSample);
 
-    // Right now we are not producing any data, in which case we need to clear the buffer
-    // (to prevent the output of random noise)
-    bufferToFill.clearActiveBufferRegion();
+        for (auto sample = 0; sample < bufferToFill.numSamples; ++sample)
+        {
+            auto noise = random.nextFloat() * 2.0f - 1.0f;
+            buffer[sample] = noise * level;
+        }
+    }
 
-    visualizer.pushBuffer(bufferToFill);
+    //visualizer.pushBuffer(bufferToFill);
 }
 
 void MainComponent::releaseResources()
