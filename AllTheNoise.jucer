@@ -4,6 +4,7 @@
               addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1">
   <MAINGROUP id="XMCAk9" name="AllTheNoise">
     <GROUP id="{F5718000-CE4C-9EE5-9635-C0B24C5DB435}" name="Source">
+      <FILE id="hKcH3c" name="TestComponent.h" compile="0" resource="0" file="Source/TestComponent.h"/>
       <FILE id="OjFK6E" name="MyAudioVisualizerComponent.cpp" compile="1"
             resource="0" file="Source/MyAudioVisualizerComponent.cpp"/>
       <FILE id="BSTT4J" name="MyAudioVisualizerComponent.h" compile="0" resource="0"

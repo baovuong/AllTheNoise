@@ -1,27 +1,42 @@
 #include "MainComponent.h"
 
+
+
 //==============================================================================
 MainComponent::MainComponent()
 {
     // Make sure you set the size of the component after
     // you add any child components.
+
+    colorNames.add("White");
+    colorNames.add("Blue");
+    colorNames.add("Pink");
+    colorNames.add("Violet");
+    colorNames.add("Grey");
+    colorNames.add("Brown");
+
     
     addAndMakeVisible(colorSlider);
     colorSlider.setRange(0, 5, 1);
     colorSlider.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
-    colorSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, getWidth() / 4, 20);
+    colorSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 200, 20);
+    colorSlider.setTextBoxStyle(juce::Slider::TextEntryBoxPosition::NoTextBox, true, 0, 0);
     colorSlider.addListener(this);
 
     addAndMakeVisible(ampSlider);
     ampSlider.setRange(0.0, 1.0);
     ampSlider.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
-    ampSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, getWidth() / 4, 20);
+    ampSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 200, 20);
     ampSlider.addListener(this);
 
     addAndMakeVisible(colorLabel);
     colorLabel.setText("Color", juce::dontSendNotification);
     colorLabel.attachToComponent(&colorSlider, false);
     colorLabel.setJustificationType(juce::Justification::centred);
+
+    addAndMakeVisible(currentColorLabel);
+    currentColorLabel.setText(colorNames[0], juce::dontSendNotification);
+    currentColorLabel.setJustificationType(juce::Justification::centred);
 
     addAndMakeVisible(ampLabel);
     ampLabel.setText("Volume", juce::dontSendNotification);
@@ -113,12 +128,17 @@ void MainComponent::resized()
 
     auto upperCorner = 40;
     auto width = getWidth() / 3 - 20;
-    auto height = getHeight() / 2 - 45;
+    auto height = getHeight() / 3 - 45;
 
     colorSlider.setBounds(upperCorner, upperCorner, width, height);
-    ampSlider.setBounds(upperCorner, colorSlider.getBounds().getBottom() + 30, width, height);
+    currentColorLabel.setBounds(upperCorner, colorSlider.getBottom(), width, 10);
+    ampSlider.setBounds(upperCorner, currentColorLabel.getBounds().getBottom() + 10, width, height);
 }
 
 void MainComponent::sliderValueChanged(juce::Slider* slider)
 {
+    if (slider == &colorSlider)
+    {
+        currentColorLabel.setText(colorNames[(int)slider->getValue()], juce::dontSendNotification);
+    }
 }

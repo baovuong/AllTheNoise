@@ -2469,6 +2469,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\TestComponent.h">
+      <Filter>AllTheNoise\Source</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\MyAudioVisualizerComponent.h">
       <Filter>AllTheNoise\Source</Filter>
     </ClInclude>

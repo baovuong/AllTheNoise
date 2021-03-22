@@ -33,11 +33,13 @@ private:
     
     juce::Label colorLabel;
     juce::Slider colorSlider;
+    juce::Label currentColorLabel;
     
     juce::Label ampLabel;
     juce::Slider ampSlider;
 
     juce::Random random;
+    juce::StringArray colorNames;
 
     MyAudioVisualizerComponent visualizer;
 
