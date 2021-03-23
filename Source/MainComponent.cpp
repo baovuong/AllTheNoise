@@ -8,13 +8,14 @@ MainComponent::MainComponent()
     // Make sure you set the size of the component after
     // you add any child components.
 
-    colorNames.add("White");
-    colorNames.add("Blue");
-    colorNames.add("Pink");
     colorNames.add("Violet");
+    colorNames.add("Blue");
     colorNames.add("Grey");
     colorNames.add("Brown");
-
+    colorNames.add("Pink");
+    colorNames.add("White");
+    
+    // things
     
     addAndMakeVisible(colorSlider);
     colorSlider.setRange(0, 5, 1);
@@ -126,13 +127,20 @@ void MainComponent::resized()
     // If you add any child components, this is where you should
     // update their positions.
 
-    auto upperCorner = 40;
-    auto width = getWidth() / 3 - 20;
-    auto height = getHeight() / 3 - 45;
+    juce::Grid grid;
 
-    colorSlider.setBounds(upperCorner, upperCorner, width, height);
-    currentColorLabel.setBounds(upperCorner, colorSlider.getBottom(), width, 10);
-    ampSlider.setBounds(upperCorner, currentColorLabel.getBounds().getBottom() + 10, width, height);
+    using Track = juce::Grid::TrackInfo;
+    using Fr = juce::Grid::Fr;
+
+    grid.templateRows = { Track(Fr(1)), Track(Fr(4)), Track(Fr(1)) };
+    grid.templateColumns = { Track(Fr(1)), Track(Fr(1)) };
+
+    grid.items = { 
+        juce::GridItem(colorLabel), juce::GridItem(ampLabel), 
+        juce::GridItem(colorSlider), juce::GridItem(ampSlider), 
+        juce::GridItem(currentColorLabel) 
+    };
+    grid.performLayout(getLocalBounds());
 }
 
 void MainComponent::sliderValueChanged(juce::Slider* slider)

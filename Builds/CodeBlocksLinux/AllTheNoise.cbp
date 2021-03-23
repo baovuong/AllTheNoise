@@ -20,7 +20,7 @@
           <Add option="-D_DEBUG=&quot;1&quot;"/>
           <Add option="-DJUCE_DISPLAY_SPLASH_SCREEN=&quot;0&quot;"/>
           <Add option="-DJUCE_USE_DARK_SPLASH_SCREEN=&quot;1&quot;"/>
-          <Add option="-DJUCE_PROJUCER_VERSION=&quot;0x60007&quot;"/>
+          <Add option="-DJUCE_PROJUCER_VERSION=&quot;0x60008&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_basics=&quot;1&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_devices=&quot;1&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_formats=&quot;1&quot;"/>
@@ -78,7 +78,7 @@
           <Add option="-DNDEBUG=&quot;1&quot;"/>
           <Add option="-DJUCE_DISPLAY_SPLASH_SCREEN=&quot;0&quot;"/>
           <Add option="-DJUCE_USE_DARK_SPLASH_SCREEN=&quot;1&quot;"/>
-          <Add option="-DJUCE_PROJUCER_VERSION=&quot;0x60007&quot;"/>
+          <Add option="-DJUCE_PROJUCER_VERSION=&quot;0x60008&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_basics=&quot;1&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_devices=&quot;1&quot;"/>
           <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_formats=&quot;1&quot;"/>
@@ -132,22 +132,6 @@
       <Add option="-Wno-strict-overflow"/>
     </Compiler>
     <Linker/>
-    <Unit filename="../../Source/TestComponent.h">
-      <Option target="App | Debug"/>
-      <Option target="App | Release"/>
-      <Option compile="0"/>
-      <Option link="0"/>
-    </Unit>
-    <Unit filename="../../Source/MyAudioVisualizerComponent.cpp">
-      <Option target="App | Debug"/>
-      <Option target="App | Release"/>
-    </Unit>
-    <Unit filename="../../Source/MyAudioVisualizerComponent.h">
-      <Option target="App | Debug"/>
-      <Option target="App | Release"/>
-      <Option compile="0"/>
-      <Option link="0"/>
-    </Unit>
     <Unit filename="../../Source/Main.cpp">
       <Option target="App | Debug"/>
       <Option target="App | Release"/>
@@ -3498,6 +3482,18 @@
       <Option compile="0"/>
       <Option link="0"/>
     </Unit>
+    <Unit filename="../../../../.local/apps/JUCE/modules/juce_audio_processors/utilities/juce_PluginHostType.cpp">
+      <Option target="App | Debug"/>
+      <Option target="App | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../.local/apps/JUCE/modules/juce_audio_processors/utilities/juce_PluginHostType.h">
+      <Option target="App | Debug"/>
+      <Option target="App | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
     <Unit filename="../../../../.local/apps/JUCE/modules/juce_audio_processors/utilities/juce_RangedAudioParameter.cpp">
       <Option target="App | Debug"/>
       <Option target="App | Release"/>
@@ -4423,6 +4419,12 @@
       <Option link="0"/>
     </Unit>
     <Unit filename="../../../../.local/apps/JUCE/modules/juce_core/native/juce_posix_SharedCode.h">
+      <Option target="App | Debug"/>
+      <Option target="App | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../.local/apps/JUCE/modules/juce_core/native/juce_wasm_SystemStats.cpp">
       <Option target="App | Debug"/>
       <Option target="App | Release"/>
       <Option compile="0"/>
@@ -7837,6 +7839,12 @@
       <Option link="0"/>
     </Unit>
     <Unit filename="../../../../.local/apps/JUCE/modules/juce_gui_basics/native/juce_win32_FileChooser.cpp">
+      <Option target="App | Debug"/>
+      <Option target="App | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../../../.local/apps/JUCE/modules/juce_gui_basics/native/juce_win32_ScopedThreadDPIAwarenessSetter.h">
       <Option target="App | Debug"/>
       <Option target="App | Release"/>
       <Option compile="0"/>
