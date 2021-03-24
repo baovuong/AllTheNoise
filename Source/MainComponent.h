@@ -25,6 +25,8 @@ public:
 
     void sliderValueChanged(juce::Slider* slider) override;
 
+    enum noiseType { white, pink, brown, grey, blue, violet };
+
 private:
     //==============================================================================
     // Your private member variables go here...juce-framework/JUCEjuce-framework/JUCEjuce-framework/JUCE

@@ -1,19 +1,18 @@
 #include "MainComponent.h"
 
 
-
 //==============================================================================
 MainComponent::MainComponent()
 {
     // Make sure you set the size of the component after
     // you add any child components.
-
-    colorNames.add("Violet");
-    colorNames.add("Blue");
-    colorNames.add("Grey");
-    colorNames.add("Brown");
-    colorNames.add("Pink");
+    
     colorNames.add("White");
+    colorNames.add("Pink");
+    colorNames.add("Brown");
+    colorNames.add("Grey");
+    colorNames.add("Blue");
+    colorNames.add("Violet");
     
     // things
     
