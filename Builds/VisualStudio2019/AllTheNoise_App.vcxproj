@@ -139,6 +139,7 @@
     <Lib/>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\PinkNoiseGeneration.cpp"/>
     <ClCompile Include="..\..\Source\WhiteNoiseGeneration.cpp"/>
     <ClCompile Include="..\..\Source\Main.cpp"/>
     <ClCompile Include="..\..\Source\MainComponent.cpp"/>
@@ -2048,6 +2049,7 @@
     <ClCompile Include="..\..\JuceLibraryCode\include_juce_gui_extra.cpp"/>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\PinkNoiseGeneration.h"/>
     <ClInclude Include="..\..\Source\WhiteNoiseGeneration.h"/>
     <ClInclude Include="..\..\Source\NoiseGeneration.h"/>
     <ClInclude Include="..\..\Source\MainComponent.h"/>

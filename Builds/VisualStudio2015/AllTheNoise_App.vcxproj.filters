@@ -424,6 +424,9 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\Source\PinkNoiseGeneration.cpp">
+      <Filter>AllTheNoise\Source</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\WhiteNoiseGeneration.cpp">
       <Filter>AllTheNoise\Source</Filter>
     </ClCompile>
@@ -2475,6 +2478,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\Source\PinkNoiseGeneration.h">
+      <Filter>AllTheNoise\Source</Filter>
+    </ClInclude>
     <ClInclude Include="..\..\Source\WhiteNoiseGeneration.h">
       <Filter>AllTheNoise\Source</Filter>
     </ClInclude>

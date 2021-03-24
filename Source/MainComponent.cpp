@@ -14,7 +14,7 @@ MainComponent::MainComponent()
     colorNames.add("Blue");
     colorNames.add("Violet");
 
-    noiseGeneration = new WhiteNoiseGeneration();
+    noiseGeneration = new WhiteNoiseGeneration;
     
     // things
     
@@ -66,7 +66,9 @@ MainComponent::~MainComponent()
     // This shuts down the audio device and clears the audio source.
     shutdownAudio();
 
+    juce::Logger::getCurrentLogger()->writeToLog("deleting noiseGeneration");
     delete noiseGeneration;
+    juce::Logger::getCurrentLogger()->writeToLog("successfully ended");
 }
 
 //==============================================================================
@@ -143,6 +145,32 @@ void MainComponent::sliderValueChanged(juce::Slider* slider)
 {
     if (slider == &colorSlider)
     {
+        auto selection = (int) slider->getValue();
         currentColorLabel.setText(colorNames[(int)slider->getValue()], juce::dontSendNotification);
+        
+        switch (selection) {
+        case 0: 
+            // White
+            noiseGeneration = new WhiteNoiseGeneration;
+            break;
+        case 1:
+            // Pink
+            noiseGeneration = new PinkNoiseGeneration;
+            break;
+        case 2:
+            // Brown
+            break;
+        case 3:
+            // Grey
+            break;
+        case 4:
+            // Blue
+            break;
+        case 5:
+            // Violet
+            break;
+        default:
+            break;
+        }
     }
 }

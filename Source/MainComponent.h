@@ -3,6 +3,8 @@
 #include <JuceHeader.h>
 
 #include "NoiseGeneration.h"
+#include "WhiteNoiseGeneration.h"
+#include "PinkNoiseGeneration.h"
 
 //==============================================================================
 /*

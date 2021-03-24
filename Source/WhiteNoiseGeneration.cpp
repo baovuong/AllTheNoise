@@ -14,7 +14,7 @@ void WhiteNoiseGeneration::generate(float *buffer, int numSamples, float level)
 {
   for (auto sample = 0; sample < numSamples; ++sample)
   {
-    auto noise = random.nextFloat() * 2.0f - 1.0f;
+    auto noise = random->nextFloat() * 2.0f - 1.0f;
     buffer[sample] = noise * level;
   }
 }

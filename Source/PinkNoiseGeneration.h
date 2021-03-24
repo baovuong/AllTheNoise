@@ -1,8 +1,8 @@
 /*
   ==============================================================================
 
-    WhiteNoiseGeneration.h
-    Created: 24 Mar 2021 1:01:12am
+    PinkNoiseGeneration.h
+    Created: 24 Mar 2021 5:10:08pm
     Author:  bvuong
 
   ==============================================================================
@@ -14,11 +14,14 @@
 
 #include "NoiseGeneration.h"
 
-class WhiteNoiseGeneration : public NoiseGeneration
+class PinkNoiseGeneration : public NoiseGeneration
 {
 public:
-  ~WhiteNoiseGeneration() {}
+  ~PinkNoiseGeneration() { 
+    delete random;
+  }
   void generate(float *buffer, int numSamples, float level);
+
 private:
   juce::SharedResourcePointer<juce::Random> random;
 };
