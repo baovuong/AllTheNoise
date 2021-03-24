@@ -99,8 +99,6 @@ void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& buffe
             buffer[sample] = noise * level;
         }
     }
-
-    //visualizer.pushBuffer(bufferToFill);
 }
 
 void MainComponent::releaseResources()

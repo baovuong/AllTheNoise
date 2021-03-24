@@ -15,37 +15,37 @@
         <Option type="0"/>
         <Option compiler="gcc"/>
         <Compiler>
-          <Add option="-DLINUX=1"/>
-          <Add option="-DDEBUG=1"/>
-          <Add option="-D_DEBUG=1"/>
-          <Add option="-DJUCE_DISPLAY_SPLASH_SCREEN=0"/>
-          <Add option="-DJUCE_USE_DARK_SPLASH_SCREEN=1"/>
-          <Add option="-DJUCE_PROJUCER_VERSION=0x60005"/>
-          <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_basics=1"/>
-          <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_devices=1"/>
-          <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_formats=1"/>
-          <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_processors=1"/>
-          <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_utils=1"/>
-          <Add option="-DJUCE_MODULE_AVAILABLE_juce_core=1"/>
-          <Add option="-DJUCE_MODULE_AVAILABLE_juce_data_structures=1"/>
-          <Add option="-DJUCE_MODULE_AVAILABLE_juce_events=1"/>
-          <Add option="-DJUCE_MODULE_AVAILABLE_juce_graphics=1"/>
-          <Add option="-DJUCE_MODULE_AVAILABLE_juce_gui_basics=1"/>
-          <Add option="-DJUCE_MODULE_AVAILABLE_juce_gui_extra=1"/>
-          <Add option="-DJUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1"/>
-          <Add option="-DJUCE_STRICT_REFCOUNTEDPOINTER=1"/>
-          <Add option="-DJUCE_STANDALONE_APPLICATION=1"/>
-          <Add option="-DJUCER_CODEBLOCKS_LINUX_191E0897=1"/>
-          <Add option="-DJUCE_APP_VERSION=1.0.0"/>
-          <Add option="-DJUCE_APP_VERSION_HEX=0x10000"/>
-          <Add option="-DJucePlugin_Build_VST=0"/>
-          <Add option="-DJucePlugin_Build_VST3=0"/>
-          <Add option="-DJucePlugin_Build_AU=0"/>
-          <Add option="-DJucePlugin_Build_AUv3=0"/>
-          <Add option="-DJucePlugin_Build_RTAS=0"/>
-          <Add option="-DJucePlugin_Build_AAX=0"/>
-          <Add option="-DJucePlugin_Build_Standalone=0"/>
-          <Add option="-DJucePlugin_Build_Unity=0"/>
+          <Add option="-DLINUX=&quot;1&quot;"/>
+          <Add option="-DDEBUG=&quot;1&quot;"/>
+          <Add option="-D_DEBUG=&quot;1&quot;"/>
+          <Add option="-DJUCE_DISPLAY_SPLASH_SCREEN=&quot;0&quot;"/>
+          <Add option="-DJUCE_USE_DARK_SPLASH_SCREEN=&quot;1&quot;"/>
+          <Add option="-DJUCE_PROJUCER_VERSION=&quot;0x60008&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_basics=&quot;1&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_devices=&quot;1&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_formats=&quot;1&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_processors=&quot;1&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_utils=&quot;1&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_core=&quot;1&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_data_structures=&quot;1&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_events=&quot;1&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_graphics=&quot;1&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_gui_basics=&quot;1&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_gui_extra=&quot;1&quot;"/>
+          <Add option="-DJUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=&quot;1&quot;"/>
+          <Add option="-DJUCE_STRICT_REFCOUNTEDPOINTER=&quot;1&quot;"/>
+          <Add option="-DJUCE_STANDALONE_APPLICATION=&quot;1&quot;"/>
+          <Add option="-DJUCER_CODEBLOCKS_LINUX_191E0897=&quot;1&quot;"/>
+          <Add option="-DJUCE_APP_VERSION=&quot;1.0.0&quot;"/>
+          <Add option="-DJUCE_APP_VERSION_HEX=&quot;0x10000&quot;"/>
+          <Add option="-DJucePlugin_Build_VST=&quot;0&quot;"/>
+          <Add option="-DJucePlugin_Build_VST3=&quot;0&quot;"/>
+          <Add option="-DJucePlugin_Build_AU=&quot;0&quot;"/>
+          <Add option="-DJucePlugin_Build_AUv3=&quot;0&quot;"/>
+          <Add option="-DJucePlugin_Build_RTAS=&quot;0&quot;"/>
+          <Add option="-DJucePlugin_Build_AAX=&quot;0&quot;"/>
+          <Add option="-DJucePlugin_Build_Standalone=&quot;0&quot;"/>
+          <Add option="-DJucePlugin_Build_Unity=&quot;0&quot;"/>
           <Add option="-m64"/>
           <Add option="-O0"/>
           <Add option="-std=c++14"/>
@@ -74,36 +74,36 @@
         <Option type="0"/>
         <Option compiler="gcc"/>
         <Compiler>
-          <Add option="-DLINUX=1"/>
-          <Add option="-DNDEBUG=1"/>
-          <Add option="-DJUCE_DISPLAY_SPLASH_SCREEN=0"/>
-          <Add option="-DJUCE_USE_DARK_SPLASH_SCREEN=1"/>
-          <Add option="-DJUCE_PROJUCER_VERSION=0x60005"/>
-          <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_basics=1"/>
-          <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_devices=1"/>
-          <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_formats=1"/>
-          <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_processors=1"/>
-          <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_utils=1"/>
-          <Add option="-DJUCE_MODULE_AVAILABLE_juce_core=1"/>
-          <Add option="-DJUCE_MODULE_AVAILABLE_juce_data_structures=1"/>
-          <Add option="-DJUCE_MODULE_AVAILABLE_juce_events=1"/>
-          <Add option="-DJUCE_MODULE_AVAILABLE_juce_graphics=1"/>
-          <Add option="-DJUCE_MODULE_AVAILABLE_juce_gui_basics=1"/>
-          <Add option="-DJUCE_MODULE_AVAILABLE_juce_gui_extra=1"/>
-          <Add option="-DJUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1"/>
-          <Add option="-DJUCE_STRICT_REFCOUNTEDPOINTER=1"/>
-          <Add option="-DJUCE_STANDALONE_APPLICATION=1"/>
-          <Add option="-DJUCER_CODEBLOCKS_LINUX_191E0897=1"/>
-          <Add option="-DJUCE_APP_VERSION=1.0.0"/>
-          <Add option="-DJUCE_APP_VERSION_HEX=0x10000"/>
-          <Add option="-DJucePlugin_Build_VST=0"/>
-          <Add option="-DJucePlugin_Build_VST3=0"/>
-          <Add option="-DJucePlugin_Build_AU=0"/>
-          <Add option="-DJucePlugin_Build_AUv3=0"/>
-          <Add option="-DJucePlugin_Build_RTAS=0"/>
-          <Add option="-DJucePlugin_Build_AAX=0"/>
-          <Add option="-DJucePlugin_Build_Standalone=0"/>
-          <Add option="-DJucePlugin_Build_Unity=0"/>
+          <Add option="-DLINUX=&quot;1&quot;"/>
+          <Add option="-DNDEBUG=&quot;1&quot;"/>
+          <Add option="-DJUCE_DISPLAY_SPLASH_SCREEN=&quot;0&quot;"/>
+          <Add option="-DJUCE_USE_DARK_SPLASH_SCREEN=&quot;1&quot;"/>
+          <Add option="-DJUCE_PROJUCER_VERSION=&quot;0x60008&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_basics=&quot;1&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_devices=&quot;1&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_formats=&quot;1&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_processors=&quot;1&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_audio_utils=&quot;1&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_core=&quot;1&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_data_structures=&quot;1&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_events=&quot;1&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_graphics=&quot;1&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_gui_basics=&quot;1&quot;"/>
+          <Add option="-DJUCE_MODULE_AVAILABLE_juce_gui_extra=&quot;1&quot;"/>
+          <Add option="-DJUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=&quot;1&quot;"/>
+          <Add option="-DJUCE_STRICT_REFCOUNTEDPOINTER=&quot;1&quot;"/>
+          <Add option="-DJUCE_STANDALONE_APPLICATION=&quot;1&quot;"/>
+          <Add option="-DJUCER_CODEBLOCKS_LINUX_191E0897=&quot;1&quot;"/>
+          <Add option="-DJUCE_APP_VERSION=&quot;1.0.0&quot;"/>
+          <Add option="-DJUCE_APP_VERSION_HEX=&quot;0x10000&quot;"/>
+          <Add option="-DJucePlugin_Build_VST=&quot;0&quot;"/>
+          <Add option="-DJucePlugin_Build_VST3=&quot;0&quot;"/>
+          <Add option="-DJucePlugin_Build_AU=&quot;0&quot;"/>
+          <Add option="-DJucePlugin_Build_AUv3=&quot;0&quot;"/>
+          <Add option="-DJucePlugin_Build_RTAS=&quot;0&quot;"/>
+          <Add option="-DJucePlugin_Build_AAX=&quot;0&quot;"/>
+          <Add option="-DJucePlugin_Build_Standalone=&quot;0&quot;"/>
+          <Add option="-DJucePlugin_Build_Unity=&quot;0&quot;"/>
           <Add option="-m64"/>
           <Add option="-O3"/>
           <Add option="-std=c++14"/>
