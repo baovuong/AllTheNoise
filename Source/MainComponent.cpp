@@ -1,5 +1,5 @@
 #include "MainComponent.h"
-
+#include "WhiteNoiseGeneration.h"
 
 //==============================================================================
 MainComponent::MainComponent()
@@ -13,6 +13,8 @@ MainComponent::MainComponent()
     colorNames.add("Grey");
     colorNames.add("Blue");
     colorNames.add("Violet");
+
+    noiseGeneration = new WhiteNoiseGeneration();
     
     // things
     
@@ -63,6 +65,8 @@ MainComponent::~MainComponent()
 {
     // This shuts down the audio device and clears the audio source.
     shutdownAudio();
+
+    delete noiseGeneration;
 }
 
 //==============================================================================
@@ -92,12 +96,7 @@ void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& buffe
     for (auto channel = 0; channel < bufferToFill.buffer->getNumChannels(); ++channel)
     {
         auto *buffer = bufferToFill.buffer->getWritePointer(channel, bufferToFill.startSample);
-
-        for (auto sample = 0; sample < bufferToFill.numSamples; ++sample)
-        {
-            auto noise = random.nextFloat() * 2.0f - 1.0f;
-            buffer[sample] = noise * level;
-        }
+        noiseGeneration->generate(buffer, bufferToFill.numSamples, level);
     }
 }
 

@@ -10,11 +10,15 @@
 
 #pragma once
 
+#include <JuceHeader.h>
+
 #include "NoiseGeneration.h"
 
 class WhiteNoiseGeneration : public NoiseGeneration
 {
 public:
   ~WhiteNoiseGeneration() {}
-  void generate(float *buffer, float level);
+  void generate(float *buffer, int numSamples, float level);
+private:
+  juce::Random random;
 };

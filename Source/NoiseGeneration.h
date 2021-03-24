@@ -14,5 +14,5 @@ class NoiseGeneration
 {
 public:
   virtual ~NoiseGeneration() {}
-  virtual void generate(float *buffer, float level) = 0;
+  virtual void generate(float *buffer, int numSamples, float level) = 0;
 };

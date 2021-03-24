@@ -2,6 +2,8 @@
 
 #include <JuceHeader.h>
 
+#include "NoiseGeneration.h"
+
 //==============================================================================
 /*
     This component lives inside our window, and this is where you should put all
@@ -40,6 +42,8 @@ private:
 
     juce::Random random;
     juce::StringArray colorNames;
+    
+    NoiseGeneration *noiseGeneration;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };
