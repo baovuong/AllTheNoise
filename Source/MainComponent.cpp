@@ -98,7 +98,7 @@ void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& buffe
     for (auto channel = 0; channel < bufferToFill.buffer->getNumChannels(); ++channel)
     {
         auto *buffer = bufferToFill.buffer->getWritePointer(channel, bufferToFill.startSample);
-        noiseGeneration->generate(buffer, bufferToFill.numSamples, level);
+        noiseGeneration->generate(&random, buffer, bufferToFill.numSamples, level);
     }
 }
 

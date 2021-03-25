@@ -17,11 +17,6 @@
 class PinkNoiseGeneration : public NoiseGeneration
 {
 public:
-  ~PinkNoiseGeneration() { 
-    delete random;
-  }
-  void generate(float *buffer, int numSamples, float level);
-
-private:
-  juce::SharedResourcePointer<juce::Random> random;
+  ~PinkNoiseGeneration() {}
+  void generate(juce::Random *random, float *buffer, int numSamples, float level);
 };

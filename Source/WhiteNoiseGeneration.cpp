@@ -10,7 +10,7 @@
 
 #include "WhiteNoiseGeneration.h"
 
-void WhiteNoiseGeneration::generate(float *buffer, int numSamples, float level)
+void WhiteNoiseGeneration::generate(juce::Random *random, float *buffer, int numSamples, float level)
 {
   for (auto sample = 0; sample < numSamples; ++sample)
   {

@@ -10,7 +10,7 @@
 
 #include "PinkNoiseGeneration.h"
 
-void PinkNoiseGeneration::generate(float *buffer, int numSamples, float level)
+void PinkNoiseGeneration::generate(juce::Random *random, float *buffer, int numSamples, float level)
 {
   // implementation of the Voss algorithm
   int max_key = 0x1f;
@@ -18,7 +18,7 @@ void PinkNoiseGeneration::generate(float *buffer, int numSamples, float level)
   float white_values[5];
 
   for (int i = 0; i < 5; i++)
-    white_values[i] = (random->nextFloat() * 2.0f - 1.0f) * level;
+    white_values[i] = (random->nextFloat() * 0.4f - 0.2f) * level;
 
   int last_key = key;
   float sum;
@@ -34,7 +34,7 @@ void PinkNoiseGeneration::generate(float *buffer, int numSamples, float level)
     for (int i = 0; i < 5; i++)
     {
       if (diff & (1 << i))
-        white_values[i] = (random->nextFloat() * 2.0f - 1.0f) * level;
+        white_values[i] = (random->nextFloat() * 0.4f - 0.2f) * level;
       sum += white_values[i];
     }
     buffer[sample] = sum;

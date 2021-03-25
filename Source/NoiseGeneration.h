@@ -10,9 +10,11 @@
 
 #pragma once
 
+#include <JuceHeader.h>
+
 class NoiseGeneration
 {
 public:
   virtual ~NoiseGeneration() {}
-  virtual void generate(float *buffer, int numSamples, float level) = 0;
+  virtual void generate(juce::Random *random, float *buffer, int numSamples, float level) = 0;
 };
