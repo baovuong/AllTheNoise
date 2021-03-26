@@ -5,6 +5,7 @@
 #include "NoiseGeneration.h"
 #include "WhiteNoiseGeneration.h"
 #include "PinkNoiseGeneration.h"
+#include "BrownNoiseGeneration.h"
 
 //==============================================================================
 /*
@@ -48,6 +49,7 @@ private:
     NoiseGeneration *noiseGeneration;
     juce::SharedResourcePointer<WhiteNoiseGeneration> whiteNoiseGeneration;
     juce::SharedResourcePointer<PinkNoiseGeneration> pinkNoiseGeneration;
+    juce::SharedResourcePointer<BrownNoiseGeneration> brownNoiseGeneration;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

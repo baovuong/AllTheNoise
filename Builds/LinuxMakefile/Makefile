@@ -68,6 +68,7 @@ ifeq ($(CONFIG),Release)
 endif
 
 OBJECTS_APP := \
+  $(JUCE_OBJDIR)/BrownNoiseGeneration_700d645.o \
   $(JUCE_OBJDIR)/PinkNoiseGeneration_57fdd.o \
   $(JUCE_OBJDIR)/WhiteNoiseGeneration_5b93c872.o \
   $(JUCE_OBJDIR)/Main_90ebc5c2.o \
@@ -96,6 +97,11 @@ $(JUCE_OUTDIR)/$(JUCE_TARGET_APP) : $(OBJECTS_APP) $(RESOURCES)
 	-$(V_AT)mkdir -p $(JUCE_LIBDIR)
 	-$(V_AT)mkdir -p $(JUCE_OUTDIR)
 	$(V_AT)$(CXX) -o $(JUCE_OUTDIR)/$(JUCE_TARGET_APP) $(OBJECTS_APP) $(JUCE_LDFLAGS) $(JUCE_LDFLAGS_APP) $(RESOURCES) $(TARGET_ARCH)
+
+$(JUCE_OBJDIR)/BrownNoiseGeneration_700d645.o: ../../Source/BrownNoiseGeneration.cpp
+	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
+	@echo "Compiling BrownNoiseGeneration.cpp"
+	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
 $(JUCE_OBJDIR)/PinkNoiseGeneration_57fdd.o: ../../Source/PinkNoiseGeneration.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)

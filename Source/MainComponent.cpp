@@ -155,6 +155,7 @@ void MainComponent::sliderValueChanged(juce::Slider* slider)
             break;
         case 2:
             // Brown
+            noiseGeneration = brownNoiseGeneration;
             break;
         case 3:
             // Grey
