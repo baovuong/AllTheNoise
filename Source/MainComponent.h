@@ -46,6 +46,8 @@ private:
     juce::StringArray colorNames;
     
     NoiseGeneration *noiseGeneration;
+    juce::SharedResourcePointer<WhiteNoiseGeneration> whiteNoiseGeneration;
+    juce::SharedResourcePointer<PinkNoiseGeneration> pinkNoiseGeneration;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };

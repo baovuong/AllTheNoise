@@ -14,12 +14,12 @@ MainComponent::MainComponent()
     colorNames.add("Blue");
     colorNames.add("Violet");
 
-    noiseGeneration = new WhiteNoiseGeneration;
+    noiseGeneration = whiteNoiseGeneration;
     
     // things
     
     addAndMakeVisible(colorSlider);
-    colorSlider.setRange(0, 5, 1);
+    colorSlider.setRange(0, colorNames.size(), 1);
     colorSlider.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
     colorSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 200, 20);
     colorSlider.setTextBoxStyle(juce::Slider::TextEntryBoxPosition::NoTextBox, true, 0, 0);
@@ -65,10 +65,6 @@ MainComponent::~MainComponent()
 {
     // This shuts down the audio device and clears the audio source.
     shutdownAudio();
-
-    juce::Logger::getCurrentLogger()->writeToLog("deleting noiseGeneration");
-    delete noiseGeneration;
-    juce::Logger::getCurrentLogger()->writeToLog("successfully ended");
 }
 
 //==============================================================================
@@ -151,11 +147,11 @@ void MainComponent::sliderValueChanged(juce::Slider* slider)
         switch (selection) {
         case 0: 
             // White
-            noiseGeneration = new WhiteNoiseGeneration;
+            noiseGeneration = whiteNoiseGeneration;
             break;
         case 1:
             // Pink
-            noiseGeneration = new PinkNoiseGeneration;
+            noiseGeneration = pinkNoiseGeneration;
             break;
         case 2:
             // Brown
