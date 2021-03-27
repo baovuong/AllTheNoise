@@ -18,7 +18,11 @@ public:
   BrownNoiseGeneration(float step = 0.2f, float dist = 0.5f);
   ~BrownNoiseGeneration() {}
   void generate(juce::Random *random, float *buffer, int numSamples, float level);
+
+  // setters
+  void step(float value);
+  void dist(float value);
 private:
-  float step;
-  float dist;
+  float _step;
+  float _dist;
 };

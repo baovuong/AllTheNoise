@@ -12,8 +12,8 @@
 
 BrownNoiseGeneration::BrownNoiseGeneration(float step, float dist)
 {
-  this->step = step;
-  this->dist = dist;
+  this->_step = step;
+  this->_dist = dist;
 }
 
 void BrownNoiseGeneration::generate(juce::Random *random, float *buffer, int numSamples, float level)
@@ -23,9 +23,20 @@ void BrownNoiseGeneration::generate(juce::Random *random, float *buffer, int num
   
   for (auto sample = 0; sample < numSamples; sample++)
   {
-    position = random->nextFloat() > this->dist 
-      ? juce::jmax(-1.0f, position + this->step) 
-      : juce::jmin(1.0f, position - this->step);
+    position = random->nextFloat() > this->_dist 
+      ? juce::jmax(-1.0f, position + this->_step) 
+      : juce::jmin(1.0f, position - this->_step);
     buffer[sample] = position * level;
   }
+}
+
+// setters
+void BrownNoiseGeneration::step(float value)
+{
+  this->_step = value;
+}
+
+void BrownNoiseGeneration::dist(float value)
+{
+  this->_dist = value;
 }
