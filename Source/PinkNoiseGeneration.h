@@ -17,6 +17,9 @@
 class PinkNoiseGeneration : public NoiseGeneration
 {
 public:
+  PinkNoiseGeneration(int rowSize = 5);
   ~PinkNoiseGeneration() {}
   void generate(juce::Random *random, float *buffer, int numSamples, float level);
+private:
+  int rowSize;
 };

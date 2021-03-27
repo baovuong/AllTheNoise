@@ -10,25 +10,22 @@
 
 #include "BrownNoiseGeneration.h"
 
+BrownNoiseGeneration::BrownNoiseGeneration(float step, float dist)
+{
+  this->step = step;
+  this->dist = dist;
+}
+
 void BrownNoiseGeneration::generate(juce::Random *random, float *buffer, int numSamples, float level)
 {
   // random walk algorithm
-  auto step = 0.2f;
   auto position = 0.0f;
-  auto dist = 0.5f;
   
   for (auto sample = 0; sample < numSamples; sample++)
   {
-    if (random->nextFloat() > dist) 
-    {
-      position += step;
-      position = juce::jmax(-1.0f, position);
-    }
-    else 
-    {
-      position -= step;
-      position = juce::jmin(1.0f, position);
-    }
+    position = random->nextFloat() > this->dist 
+      ? juce::jmax(-1.0f, position + this->step) 
+      : juce::jmin(1.0f, position - this->step);
     buffer[sample] = position * level;
   }
 }
