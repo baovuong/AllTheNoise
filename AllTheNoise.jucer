@@ -25,6 +25,9 @@
               file="Source/Components/BrownNoisePanelComponent.cpp"/>
         <FILE id="gW184q" name="BrownNoisePanelComponent.h" compile="0" resource="0"
               file="Source/Components/BrownNoisePanelComponent.h"/>
+        <FILE id="z2TQMj" name="DecibelSlider.cpp" compile="1" resource="0"
+              file="Source/Components/DecibelSlider.cpp"/>
+        <FILE id="KthNQj" name="DecibelSlider.h" compile="0" resource="0" file="Source/Components/DecibelSlider.h"/>
         <FILE id="DZS70O" name="GlobalPanelComponent.cpp" compile="1" resource="0"
               file="Source/Components/GlobalPanelComponent.cpp"/>
         <FILE id="SmiJ94" name="GlobalPanelComponent.h" compile="0" resource="0"

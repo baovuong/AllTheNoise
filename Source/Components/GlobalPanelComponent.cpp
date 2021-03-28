@@ -26,7 +26,8 @@ GlobalPanelComponent::GlobalPanelComponent()
 
 
     addAndMakeVisible(volumeSlider);
-    volumeSlider.setRange(0.0, 1.0);
+    volumeSlider.setRange(-100, 0);
+    volumeSlider.setValue (juce::Decibels::gainToDecibels (-50));
     volumeSlider.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
     volumeSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 200, 20);
     volumeSlider.addListener(this);
@@ -100,7 +101,7 @@ void GlobalPanelComponent::sliderValueChanged(juce::Slider* slider)
 
 float GlobalPanelComponent::getVolume()
 {
-    return volumeSlider.getValue();
+    return juce::Decibels::decibelsToGain ((float) volumeSlider.getValue());
 }
 
 int GlobalPanelComponent::getColorType()

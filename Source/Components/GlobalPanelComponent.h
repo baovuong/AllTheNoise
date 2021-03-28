@@ -12,6 +12,8 @@
 
 #include <JuceHeader.h>
 
+#include "DecibelSlider.h"
+
 //==============================================================================
 /*
 */
@@ -36,7 +38,7 @@ private:
     juce::Label colorTypeLabel;
 
     juce::Slider colorTypeSlider;
-    juce::Slider volumeSlider;
+    DecibelSlider volumeSlider;
 
     juce::StringArray colorNames;
 
