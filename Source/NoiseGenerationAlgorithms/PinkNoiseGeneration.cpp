@@ -26,10 +26,10 @@ void PinkNoiseGeneration::generate(juce::Random *random, float *buffer, int numS
     // implementation of the Voss algorithm
     int max_key = (1 << this->_rowSize) - 1;
     int key = 0;
-    float white_values[this->_rowSize];
+    juce::Array<float> white_values;
 
     for (int i = 0; i < this->_rowSize; i++)
-        white_values[i] = nextValue(random, this->_rowSize) * level;
+        white_values.add(nextValue(random, this->_rowSize) * level);
 
     int last_key = key;
     float sum;
@@ -45,7 +45,7 @@ void PinkNoiseGeneration::generate(juce::Random *random, float *buffer, int numS
         for (int i = 0; i < this->_rowSize; i++)
         {
             if (diff & (1 << i))
-                white_values[i] = nextValue(random, this->_rowSize) * level;
+                white_values.set(i, nextValue(random, this->_rowSize) * level);
             sum += white_values[i];
         }
         buffer[sample] = sum;
