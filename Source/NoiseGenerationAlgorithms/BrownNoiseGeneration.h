@@ -15,14 +15,15 @@
 class BrownNoiseGeneration : public NoiseGeneration
 {
 public:
-  BrownNoiseGeneration(float step = 0.2f, float dist = 0.5f);
-  ~BrownNoiseGeneration() {}
-  void generate(juce::Random *random, float *buffer, int numSamples, float level);
+    BrownNoiseGeneration(float step = 0.2f, float dist = 0.5f);
+    ~BrownNoiseGeneration() {}
+    void generate(juce::Random *random, float *buffer, int numSamples, float level);
 
-  // setters
-  void step(float value);
-  void dist(float value);
+    // setters
+    void step(float value);
+    void dist(float value);
+
 private:
-  float _step;
-  float _dist;
+    float _step;
+    float _dist;
 };

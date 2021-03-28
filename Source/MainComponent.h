@@ -7,6 +7,10 @@
 #include "NoiseGenerationAlgorithms/PinkNoiseGeneration.h"
 #include "NoiseGenerationAlgorithms/BrownNoiseGeneration.h"
 
+#include "Components/PinkNoisePanelComponent.h"
+#include "Components/BrownNoisePanelComponent.h"
+#include "Components/GlobalPanelComponent.h"
+
 //==============================================================================
 /*
     This component lives inside our window, and this is where you should put all

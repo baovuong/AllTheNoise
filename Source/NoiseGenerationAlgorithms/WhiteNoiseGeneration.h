@@ -17,6 +17,6 @@
 class WhiteNoiseGeneration : public NoiseGeneration
 {
 public:
-  ~WhiteNoiseGeneration() {}
-  void generate(juce::Random *random, float *buffer, int numSamples, float level);
+    ~WhiteNoiseGeneration() {}
+    void generate(juce::Random *random, float *buffer, int numSamples, float level);
 };

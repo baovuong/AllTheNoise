@@ -17,12 +17,13 @@
 class PinkNoiseGeneration : public NoiseGeneration
 {
 public:
-  PinkNoiseGeneration(int rowSize = 10);
-  ~PinkNoiseGeneration() {}
-  void generate(juce::Random *random, float *buffer, int numSamples, float level);
+    PinkNoiseGeneration(int rowSize = 10);
+    ~PinkNoiseGeneration() {}
+    void generate(juce::Random *random, float *buffer, int numSamples, float level);
 
-  // setters
-  void rowSize(int value);
+    // setters
+    void rowSize(int value);
+
 private:
-  int _rowSize;
+    int _rowSize;
 };
