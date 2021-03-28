@@ -142,6 +142,10 @@
     <ClCompile Include="..\..\Source\NoiseGenerationAlgorithms\BrownNoiseGeneration.cpp"/>
     <ClCompile Include="..\..\Source\NoiseGenerationAlgorithms\PinkNoiseGeneration.cpp"/>
     <ClCompile Include="..\..\Source\NoiseGenerationAlgorithms\WhiteNoiseGeneration.cpp"/>
+    <ClCompile Include="..\..\Source\Components\BrownNoisePanelComponent.cpp"/>
+    <ClCompile Include="..\..\Source\Components\GlobalPanelComponent.cpp"/>
+    <ClCompile Include="..\..\Source\Components\PinkNoisePanelComponent.cpp"/>
+    <ClCompile Include="..\..\Source\Components\WhiteNoisePanelComponent.cpp"/>
     <ClCompile Include="..\..\Source\Main.cpp"/>
     <ClCompile Include="..\..\Source\MainComponent.cpp"/>
     <ClCompile Include="C:\JUCE\modules\juce_audio_basics\buffers\juce_AudioChannelSet.cpp">
@@ -2054,6 +2058,10 @@
     <ClInclude Include="..\..\Source\NoiseGenerationAlgorithms\NoiseGeneration.h"/>
     <ClInclude Include="..\..\Source\NoiseGenerationAlgorithms\PinkNoiseGeneration.h"/>
     <ClInclude Include="..\..\Source\NoiseGenerationAlgorithms\WhiteNoiseGeneration.h"/>
+    <ClInclude Include="..\..\Source\Components\BrownNoisePanelComponent.h"/>
+    <ClInclude Include="..\..\Source\Components\GlobalPanelComponent.h"/>
+    <ClInclude Include="..\..\Source\Components\PinkNoisePanelComponent.h"/>
+    <ClInclude Include="..\..\Source\Components\WhiteNoisePanelComponent.h"/>
     <ClInclude Include="..\..\Source\MainComponent.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_basics\buffers\juce_AudioChannelSet.h"/>

@@ -5,6 +5,9 @@
     <Filter Include="AllTheNoise\Source\NoiseGenerationAlgorithms">
       <UniqueIdentifier>{A9665E8B-F7B1-2EF3-8714-9BB9FA09D7A4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AllTheNoise\Source\Components">
+      <UniqueIdentifier>{341EA26E-C0CC-DA8A-F0D2-7784FF541EE9}</UniqueIdentifier>
+    </Filter>
     <Filter Include="AllTheNoise\Source">
       <UniqueIdentifier>{4B13BA99-D229-8480-AFB3-6293E5743958}</UniqueIdentifier>
     </Filter>
@@ -435,6 +438,18 @@
     </ClCompile>
     <ClCompile Include="..\..\Source\NoiseGenerationAlgorithms\WhiteNoiseGeneration.cpp">
       <Filter>AllTheNoise\Source\NoiseGenerationAlgorithms</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Components\BrownNoisePanelComponent.cpp">
+      <Filter>AllTheNoise\Source\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Components\GlobalPanelComponent.cpp">
+      <Filter>AllTheNoise\Source\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Components\PinkNoisePanelComponent.cpp">
+      <Filter>AllTheNoise\Source\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\Components\WhiteNoisePanelComponent.cpp">
+      <Filter>AllTheNoise\Source\Components</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Main.cpp">
       <Filter>AllTheNoise\Source</Filter>
@@ -2495,6 +2510,18 @@
     </ClInclude>
     <ClInclude Include="..\..\Source\NoiseGenerationAlgorithms\WhiteNoiseGeneration.h">
       <Filter>AllTheNoise\Source\NoiseGenerationAlgorithms</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Components\BrownNoisePanelComponent.h">
+      <Filter>AllTheNoise\Source\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Components\GlobalPanelComponent.h">
+      <Filter>AllTheNoise\Source\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Components\PinkNoisePanelComponent.h">
+      <Filter>AllTheNoise\Source\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Components\WhiteNoisePanelComponent.h">
+      <Filter>AllTheNoise\Source\Components</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\MainComponent.h">
       <Filter>AllTheNoise\Source</Filter>

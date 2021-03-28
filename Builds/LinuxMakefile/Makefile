@@ -71,6 +71,10 @@ OBJECTS_APP := \
   $(JUCE_OBJDIR)/BrownNoiseGeneration_50135dfe.o \
   $(JUCE_OBJDIR)/PinkNoiseGeneration_d9169d04.o \
   $(JUCE_OBJDIR)/WhiteNoiseGeneration_a4a6502b.o \
+  $(JUCE_OBJDIR)/BrownNoisePanelComponent_659bc857.o \
+  $(JUCE_OBJDIR)/GlobalPanelComponent_c61c7536.o \
+  $(JUCE_OBJDIR)/PinkNoisePanelComponent_956a472d.o \
+  $(JUCE_OBJDIR)/WhiteNoisePanelComponent_75dfdc04.o \
   $(JUCE_OBJDIR)/Main_90ebc5c2.o \
   $(JUCE_OBJDIR)/MainComponent_a6ffb4a5.o \
   $(JUCE_OBJDIR)/include_juce_audio_basics_8a4e984a.o \
@@ -111,6 +115,26 @@ $(JUCE_OBJDIR)/PinkNoiseGeneration_d9169d04.o: ../../Source/NoiseGenerationAlgor
 $(JUCE_OBJDIR)/WhiteNoiseGeneration_a4a6502b.o: ../../Source/NoiseGenerationAlgorithms/WhiteNoiseGeneration.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling WhiteNoiseGeneration.cpp"
+	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
+
+$(JUCE_OBJDIR)/BrownNoisePanelComponent_659bc857.o: ../../Source/Components/BrownNoisePanelComponent.cpp
+	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
+	@echo "Compiling BrownNoisePanelComponent.cpp"
+	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
+
+$(JUCE_OBJDIR)/GlobalPanelComponent_c61c7536.o: ../../Source/Components/GlobalPanelComponent.cpp
+	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
+	@echo "Compiling GlobalPanelComponent.cpp"
+	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
+
+$(JUCE_OBJDIR)/PinkNoisePanelComponent_956a472d.o: ../../Source/Components/PinkNoisePanelComponent.cpp
+	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
+	@echo "Compiling PinkNoisePanelComponent.cpp"
+	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
+
+$(JUCE_OBJDIR)/WhiteNoisePanelComponent_75dfdc04.o: ../../Source/Components/WhiteNoisePanelComponent.cpp
+	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
+	@echo "Compiling WhiteNoisePanelComponent.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
 $(JUCE_OBJDIR)/Main_90ebc5c2.o: ../../Source/Main.cpp

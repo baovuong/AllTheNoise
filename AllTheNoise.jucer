@@ -20,7 +20,24 @@
         <FILE id="YWBTL6" name="WhiteNoiseGeneration.h" compile="0" resource="0"
               file="Source/NoiseGenerationAlgorithms/WhiteNoiseGeneration.h"/>
       </GROUP>
-      <GROUP id="{5F774C75-75A5-895F-699E-8C08C1F5311F}" name="Components"/>
+      <GROUP id="{5F774C75-75A5-895F-699E-8C08C1F5311F}" name="Components">
+        <FILE id="fe3vSb" name="BrownNoisePanelComponent.cpp" compile="1" resource="0"
+              file="Source/Components/BrownNoisePanelComponent.cpp"/>
+        <FILE id="gW184q" name="BrownNoisePanelComponent.h" compile="0" resource="0"
+              file="Source/Components/BrownNoisePanelComponent.h"/>
+        <FILE id="DZS70O" name="GlobalPanelComponent.cpp" compile="1" resource="0"
+              file="Source/Components/GlobalPanelComponent.cpp"/>
+        <FILE id="SmiJ94" name="GlobalPanelComponent.h" compile="0" resource="0"
+              file="Source/Components/GlobalPanelComponent.h"/>
+        <FILE id="ghHcrK" name="PinkNoisePanelComponent.cpp" compile="1" resource="0"
+              file="Source/Components/PinkNoisePanelComponent.cpp"/>
+        <FILE id="R67zAO" name="PinkNoisePanelComponent.h" compile="0" resource="0"
+              file="Source/Components/PinkNoisePanelComponent.h"/>
+        <FILE id="MNfd41" name="WhiteNoisePanelComponent.cpp" compile="1" resource="0"
+              file="Source/Components/WhiteNoisePanelComponent.cpp"/>
+        <FILE id="hninVQ" name="WhiteNoisePanelComponent.h" compile="0" resource="0"
+              file="Source/Components/WhiteNoisePanelComponent.h"/>
+      </GROUP>
       <FILE id="ghwgsQ" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
       <FILE id="zfioL5" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
       <FILE id="qchfVb" name="MainComponent.cpp" compile="1" resource="0"
