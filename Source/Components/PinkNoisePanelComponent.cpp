@@ -17,6 +17,9 @@ PinkNoisePanelComponent::PinkNoisePanelComponent()
     // In your constructor, you should add any child components, and
     // initialise any special settings that your component needs.
 
+    addAndMakeVisible(panelLabel);
+    addAndMakeVisible(numRowKnob);
+
 }
 
 PinkNoisePanelComponent::~PinkNoisePanelComponent()
@@ -32,20 +35,22 @@ void PinkNoisePanelComponent::paint (juce::Graphics& g)
        drawing code..
     */
 
-    g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));   // clear the background
+    // g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));   // clear the background
 
-    g.setColour (juce::Colours::grey);
-    g.drawRect (getLocalBounds(), 1);   // draw an outline around the component
+    // g.setColour (juce::Colours::grey);
+    // g.drawRect (getLocalBounds(), 1);   // draw an outline around the component
 
-    g.setColour (juce::Colours::white);
-    g.setFont (14.0f);
-    g.drawText ("PinkNoisePanelComponent", getLocalBounds(),
-                juce::Justification::centred, true);   // draw some placeholder text
+    // g.setColour (juce::Colours::white);
+    // g.setFont (14.0f);
+    // g.drawText ("PinkNoisePanelComponent", getLocalBounds(),
+    //             juce::Justification::centred, true);   // draw some placeholder text
 }
 
 void PinkNoisePanelComponent::resized()
 {
     // This method is where you should set the bounds of any child
     // components that your component contains..
+
+    
 
 }
