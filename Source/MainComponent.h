@@ -16,7 +16,7 @@
     This component lives inside our window, and this is where you should put all
     your controls and content.
 */
-class MainComponent  : public juce::AudioAppComponent, public juce::Slider::Listener
+class MainComponent  : public juce::AudioAppComponent, public juce::ChangeListener
 {
 public:
     //==============================================================================
@@ -32,23 +32,17 @@ public:
     void paint (juce::Graphics& g) override;
     void resized() override;
 
-    void sliderValueChanged(juce::Slider* slider) override;
+    void changeListenerCallback(juce::ChangeBroadcaster* source) override;
 
     enum noiseType { white, pink, brown, grey, blue, violet };
 
 private:
     //==============================================================================
     // Your private member variables go here...juce-framework/JUCEjuce-framework/JUCEjuce-framework/JUCE
-    
-    juce::Label colorLabel;
-    juce::Slider colorSlider;
-    juce::Label currentColorLabel;
-    
-    juce::Label ampLabel;
-    juce::Slider ampSlider;
 
     juce::Random random;
-    juce::StringArray colorNames;
+
+    GlobalPanelComponent globalPanel;
     
     NoiseGeneration *noiseGeneration;
     juce::SharedResourcePointer<WhiteNoiseGeneration> whiteNoiseGeneration;

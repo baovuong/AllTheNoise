@@ -5,44 +5,11 @@ MainComponent::MainComponent()
 {
     // Make sure you set the size of the component after
     // you add any child components.
-    
-    colorNames.add("White");
-    colorNames.add("Pink");
-    colorNames.add("Brown");
-    colorNames.add("Grey");
-    colorNames.add("Blue");
-    colorNames.add("Violet");
 
     noiseGeneration = whiteNoiseGeneration;
     
-    // things
-    
-    addAndMakeVisible(colorSlider);
-    colorSlider.setRange(0, colorNames.size(), 1);
-    colorSlider.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
-    colorSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 200, 20);
-    colorSlider.setTextBoxStyle(juce::Slider::TextEntryBoxPosition::NoTextBox, true, 0, 0);
-    colorSlider.addListener(this);
-
-    addAndMakeVisible(ampSlider);
-    ampSlider.setRange(0.0, 1.0);
-    ampSlider.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
-    ampSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 200, 20);
-    ampSlider.addListener(this);
-
-    addAndMakeVisible(colorLabel);
-    colorLabel.setText("Color", juce::dontSendNotification);
-    colorLabel.attachToComponent(&colorSlider, false);
-    colorLabel.setJustificationType(juce::Justification::centred);
-
-    addAndMakeVisible(currentColorLabel);
-    currentColorLabel.setText(colorNames[0], juce::dontSendNotification);
-    currentColorLabel.setJustificationType(juce::Justification::centred);
-
-    addAndMakeVisible(ampLabel);
-    ampLabel.setText("Volume", juce::dontSendNotification);
-    ampLabel.attachToComponent(&ampSlider, false);
-    ampLabel.setJustificationType(juce::Justification::centred);
+    addAndMakeVisible(globalPanel);
+    globalPanel.addChangeListener(this);
 
     setSize (800, 600);
 
@@ -88,7 +55,7 @@ void MainComponent::prepareToPlay (int samplesPerBlockExpected, double sampleRat
 void MainComponent::getNextAudioBlock (const juce::AudioSourceChannelInfo& bufferToFill)
 {
     // Your audio-processing code goes here!
-    auto level = (float) ampSlider.getValue();
+    auto level = (float) globalPanel.getVolume();
 
     for (auto channel = 0; channel < bufferToFill.buffer->getNumChannels(); ++channel)
     {
@@ -125,26 +92,23 @@ void MainComponent::resized()
     using Track = juce::Grid::TrackInfo;
     using Fr = juce::Grid::Fr;
 
-    grid.templateRows = { Track(Fr(1)), Track(Fr(4)), Track(Fr(1)) };
-    grid.templateColumns = { Track(Fr(1)), Track(Fr(1)) };
+    grid.templateRows = { Track(Fr(1)) };
+    grid.templateColumns = { Track(Fr(1)) };
 
     grid.items = { 
-        juce::GridItem(colorLabel), juce::GridItem(ampLabel), 
-        juce::GridItem(colorSlider), juce::GridItem(ampSlider), 
-        juce::GridItem(currentColorLabel) 
+        juce::GridItem(globalPanel)
     };
     grid.performLayout(getLocalBounds());
 }
 
-void MainComponent::sliderValueChanged(juce::Slider* slider)
+void MainComponent::changeListenerCallback(juce::ChangeBroadcaster* source)
 {
-    if (slider == &colorSlider)
+    if (source == &globalPanel)
     {
-        auto selection = (int) slider->getValue();
-        currentColorLabel.setText(colorNames[(int)slider->getValue()], juce::dontSendNotification);
-        
-        switch (selection) {
-        case 0: 
+        // update color type
+        switch (globalPanel.getColorType())
+        {
+        case 0:
             // White
             noiseGeneration = whiteNoiseGeneration;
             break;
