@@ -36,6 +36,10 @@
               file="Source/Components/PinkNoisePanelComponent.cpp"/>
         <FILE id="R67zAO" name="PinkNoisePanelComponent.h" compile="0" resource="0"
               file="Source/Components/PinkNoisePanelComponent.h"/>
+        <FILE id="J23bMi" name="SelectorSlider.cpp" compile="1" resource="0"
+              file="Source/Components/SelectorSlider.cpp"/>
+        <FILE id="Cj2GUd" name="SelectorSlider.h" compile="0" resource="0"
+              file="Source/Components/SelectorSlider.h"/>
         <FILE id="MNfd41" name="WhiteNoisePanelComponent.cpp" compile="1" resource="0"
               file="Source/Components/WhiteNoisePanelComponent.cpp"/>
         <FILE id="hninVQ" name="WhiteNoisePanelComponent.h" compile="0" resource="0"

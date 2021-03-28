@@ -1,29 +1,31 @@
 /*
   ==============================================================================
 
-    DecibelSlider.h
-    Created: 28 Mar 2021 12:41:58am
+    SelectorSlider.h
+    Created: 28 Mar 2021 11:18:49am
     Author:  bvuong
 
   ==============================================================================
 */
 
 #pragma once
-
 #include <JuceHeader.h>
 
 //==============================================================================
 /*
 */
-class DecibelSlider  : public juce::Slider
+class SelectorSlider  : public juce::Slider
 {
 public:
-    DecibelSlider();
-    ~DecibelSlider() override;
+    SelectorSlider();
+    ~SelectorSlider() override;
     
     juce::String getTextFromValue (double value) override;
     double getValueFromText (const juce::String& text) override;
 
+    void addOption(const juce::String& option);
+
 private:
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (DecibelSlider)
+    juce::StringArray options;
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (SelectorSlider)
 };

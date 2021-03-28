@@ -17,14 +17,6 @@ GlobalPanelComponent::GlobalPanelComponent()
     // In your constructor, you should add any child components, and
     // initialise any special settings that your component needs.
 
-    colorNames.add("White");
-    colorNames.add("Pink");
-    colorNames.add("Brown");
-    colorNames.add("Grey");
-    colorNames.add("Blue");
-    colorNames.add("Violet");
-
-
     addAndMakeVisible(volumeSlider);
     volumeSlider.setRange(-100, 0);
     volumeSlider.setValue (juce::Decibels::gainToDecibels (-50));
@@ -38,10 +30,14 @@ GlobalPanelComponent::GlobalPanelComponent()
     volumeLabel.setJustificationType(juce::Justification::centred);
 
     addAndMakeVisible(colorTypeSlider);
-    colorTypeSlider.setRange(0, colorNames.size(), 1);
+    colorTypeSlider.addOption("White");
+    colorTypeSlider.addOption("Pink");
+    colorTypeSlider.addOption("Brown");
+    colorTypeSlider.addOption("Grey");
+    colorTypeSlider.addOption("Blue");
+    colorTypeSlider.addOption("Violet");
     colorTypeSlider.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
     colorTypeSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 200, 20);
-    colorTypeSlider.setTextBoxStyle(juce::Slider::TextEntryBoxPosition::NoTextBox, true, 0, 0);
     colorTypeSlider.addListener(this);
 
     addAndMakeVisible(colorTypeLabel);
@@ -83,7 +79,7 @@ void GlobalPanelComponent::resized()
     using Track = juce::Grid::TrackInfo;
     using Fr = juce::Grid::Fr;
 
-    grid.templateRows = { Track(Fr(1)), Track(Fr(1)) };
+    grid.templateRows = { Track(Fr(2)), Track(Fr(2)) };
     grid.templateColumns = { Track(Fr(1)) };
 
     grid.items = {

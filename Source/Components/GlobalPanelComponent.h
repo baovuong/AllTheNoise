@@ -13,6 +13,7 @@
 #include <JuceHeader.h>
 
 #include "DecibelSlider.h"
+#include "SelectorSlider.h"
 
 //==============================================================================
 /*
@@ -37,10 +38,8 @@ private:
     juce::Label volumeLabel;
     juce::Label colorTypeLabel;
 
-    juce::Slider colorTypeSlider;
+    SelectorSlider colorTypeSlider;
     DecibelSlider volumeSlider;
-
-    juce::StringArray colorNames;
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (GlobalPanelComponent)
 };

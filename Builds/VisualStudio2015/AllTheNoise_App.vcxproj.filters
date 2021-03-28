@@ -451,6 +451,9 @@
     <ClCompile Include="..\..\Source\Components\PinkNoisePanelComponent.cpp">
       <Filter>AllTheNoise\Source\Components</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\Components\SelectorSlider.cpp">
+      <Filter>AllTheNoise\Source\Components</Filter>
+    </ClCompile>
     <ClCompile Include="..\..\Source\Components\WhiteNoisePanelComponent.cpp">
       <Filter>AllTheNoise\Source\Components</Filter>
     </ClCompile>
@@ -2524,6 +2527,9 @@
       <Filter>AllTheNoise\Source\Components</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Components\PinkNoisePanelComponent.h">
+      <Filter>AllTheNoise\Source\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\Components\SelectorSlider.h">
       <Filter>AllTheNoise\Source\Components</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\Components\WhiteNoisePanelComponent.h">

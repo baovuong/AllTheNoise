@@ -146,6 +146,7 @@
     <ClCompile Include="..\..\Source\Components\DecibelSlider.cpp"/>
     <ClCompile Include="..\..\Source\Components\GlobalPanelComponent.cpp"/>
     <ClCompile Include="..\..\Source\Components\PinkNoisePanelComponent.cpp"/>
+    <ClCompile Include="..\..\Source\Components\SelectorSlider.cpp"/>
     <ClCompile Include="..\..\Source\Components\WhiteNoisePanelComponent.cpp"/>
     <ClCompile Include="..\..\Source\Main.cpp"/>
     <ClCompile Include="..\..\Source\MainComponent.cpp"/>
@@ -2063,6 +2064,7 @@
     <ClInclude Include="..\..\Source\Components\DecibelSlider.h"/>
     <ClInclude Include="..\..\Source\Components\GlobalPanelComponent.h"/>
     <ClInclude Include="..\..\Source\Components\PinkNoisePanelComponent.h"/>
+    <ClInclude Include="..\..\Source\Components\SelectorSlider.h"/>
     <ClInclude Include="..\..\Source\Components\WhiteNoisePanelComponent.h"/>
     <ClInclude Include="..\..\Source\MainComponent.h"/>
     <ClInclude Include="C:\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.h"/>

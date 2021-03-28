@@ -75,6 +75,7 @@ OBJECTS_APP := \
   $(JUCE_OBJDIR)/DecibelSlider_63702c33.o \
   $(JUCE_OBJDIR)/GlobalPanelComponent_c61c7536.o \
   $(JUCE_OBJDIR)/PinkNoisePanelComponent_956a472d.o \
+  $(JUCE_OBJDIR)/SelectorSlider_b1be5aba.o \
   $(JUCE_OBJDIR)/WhiteNoisePanelComponent_75dfdc04.o \
   $(JUCE_OBJDIR)/Main_90ebc5c2.o \
   $(JUCE_OBJDIR)/MainComponent_a6ffb4a5.o \
@@ -136,6 +137,11 @@ $(JUCE_OBJDIR)/GlobalPanelComponent_c61c7536.o: ../../Source/Components/GlobalPa
 $(JUCE_OBJDIR)/PinkNoisePanelComponent_956a472d.o: ../../Source/Components/PinkNoisePanelComponent.cpp
 	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
 	@echo "Compiling PinkNoisePanelComponent.cpp"
+	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
+
+$(JUCE_OBJDIR)/SelectorSlider_b1be5aba.o: ../../Source/Components/SelectorSlider.cpp
+	-$(V_AT)mkdir -p $(JUCE_OBJDIR)
+	@echo "Compiling SelectorSlider.cpp"
 	$(V_AT)$(CXX) $(JUCE_CXXFLAGS) $(JUCE_CPPFLAGS_APP) $(JUCE_CFLAGS_APP) -o "$@" -c "$<"
 
 $(JUCE_OBJDIR)/WhiteNoisePanelComponent_75dfdc04.o: ../../Source/Components/WhiteNoisePanelComponent.cpp

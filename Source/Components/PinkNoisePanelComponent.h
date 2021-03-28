@@ -15,7 +15,7 @@
 //==============================================================================
 /*
 */
-class PinkNoisePanelComponent  : public juce::Component
+class PinkNoisePanelComponent  : public juce::Component, public juce::ChangeBroadcaster, juce::Slider::Listener
 {
 public:
     PinkNoisePanelComponent();
@@ -24,6 +24,10 @@ public:
     void paint (juce::Graphics&) override;
     void resized() override;
 
+    int getNumRows();
+
 private:
+    juce::Label panelLabel;
+    juce::Slider numRowKnob;
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (PinkNoisePanelComponent)
 };
