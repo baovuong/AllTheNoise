@@ -2,6 +2,9 @@
 
 <Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
+    <Filter Include="AllTheNoise\Source\NoiseGenerationAlgorithms">
+      <UniqueIdentifier>{A9665E8B-F7B1-2EF3-8714-9BB9FA09D7A4}</UniqueIdentifier>
+    </Filter>
     <Filter Include="AllTheNoise\Source">
       <UniqueIdentifier>{4B13BA99-D229-8480-AFB3-6293E5743958}</UniqueIdentifier>
     </Filter>
@@ -424,14 +427,14 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Source\BrownNoiseGeneration.cpp">
-      <Filter>AllTheNoise\Source</Filter>
+    <ClCompile Include="..\..\Source\NoiseGenerationAlgorithms\BrownNoiseGeneration.cpp">
+      <Filter>AllTheNoise\Source\NoiseGenerationAlgorithms</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\PinkNoiseGeneration.cpp">
-      <Filter>AllTheNoise\Source</Filter>
+    <ClCompile Include="..\..\Source\NoiseGenerationAlgorithms\PinkNoiseGeneration.cpp">
+      <Filter>AllTheNoise\Source\NoiseGenerationAlgorithms</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Source\WhiteNoiseGeneration.cpp">
-      <Filter>AllTheNoise\Source</Filter>
+    <ClCompile Include="..\..\Source\NoiseGenerationAlgorithms\WhiteNoiseGeneration.cpp">
+      <Filter>AllTheNoise\Source\NoiseGenerationAlgorithms</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Source\Main.cpp">
       <Filter>AllTheNoise\Source</Filter>
@@ -2481,17 +2484,17 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\Source\BrownNoiseGeneration.h">
-      <Filter>AllTheNoise\Source</Filter>
+    <ClInclude Include="..\..\Source\NoiseGenerationAlgorithms\BrownNoiseGeneration.h">
+      <Filter>AllTheNoise\Source\NoiseGenerationAlgorithms</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\PinkNoiseGeneration.h">
-      <Filter>AllTheNoise\Source</Filter>
+    <ClInclude Include="..\..\Source\NoiseGenerationAlgorithms\NoiseGeneration.h">
+      <Filter>AllTheNoise\Source\NoiseGenerationAlgorithms</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\WhiteNoiseGeneration.h">
-      <Filter>AllTheNoise\Source</Filter>
+    <ClInclude Include="..\..\Source\NoiseGenerationAlgorithms\PinkNoiseGeneration.h">
+      <Filter>AllTheNoise\Source\NoiseGenerationAlgorithms</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Source\NoiseGeneration.h">
-      <Filter>AllTheNoise\Source</Filter>
+    <ClInclude Include="..\..\Source\NoiseGenerationAlgorithms\WhiteNoiseGeneration.h">
+      <Filter>AllTheNoise\Source\NoiseGenerationAlgorithms</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Source\MainComponent.h">
       <Filter>AllTheNoise\Source</Filter>

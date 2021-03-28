@@ -4,20 +4,23 @@
               addUsingNamespaceToJuceHeader="0" jucerFormatVersion="1">
   <MAINGROUP id="XMCAk9" name="AllTheNoise">
     <GROUP id="{F5718000-CE4C-9EE5-9635-C0B24C5DB435}" name="Source">
-      <FILE id="OGdFfG" name="BrownNoiseGeneration.cpp" compile="1" resource="0"
-            file="Source/BrownNoiseGeneration.cpp"/>
-      <FILE id="Ww57jU" name="BrownNoiseGeneration.h" compile="0" resource="0"
-            file="Source/BrownNoiseGeneration.h"/>
-      <FILE id="c5aOPl" name="PinkNoiseGeneration.h" compile="0" resource="0"
-            file="Source/PinkNoiseGeneration.h"/>
-      <FILE id="KyUQ96" name="PinkNoiseGeneration.cpp" compile="1" resource="0"
-            file="Source/PinkNoiseGeneration.cpp"/>
-      <FILE id="CSpA12" name="WhiteNoiseGeneration.cpp" compile="1" resource="0"
-            file="Source/WhiteNoiseGeneration.cpp"/>
-      <FILE id="IDRcvE" name="WhiteNoiseGeneration.h" compile="0" resource="0"
-            file="Source/WhiteNoiseGeneration.h"/>
-      <FILE id="L1dYbZ" name="NoiseGeneration.h" compile="0" resource="0"
-            file="Source/NoiseGeneration.h"/>
+      <GROUP id="{69BB2D95-0EB3-72CA-4994-747FD500F4F2}" name="NoiseGenerationAlgorithms">
+        <FILE id="j6fFcc" name="BrownNoiseGeneration.cpp" compile="1" resource="0"
+              file="Source/NoiseGenerationAlgorithms/BrownNoiseGeneration.cpp"/>
+        <FILE id="qdzbPW" name="BrownNoiseGeneration.h" compile="0" resource="0"
+              file="Source/NoiseGenerationAlgorithms/BrownNoiseGeneration.h"/>
+        <FILE id="pIcIK0" name="NoiseGeneration.h" compile="0" resource="0"
+              file="Source/NoiseGenerationAlgorithms/NoiseGeneration.h"/>
+        <FILE id="ojGzRm" name="PinkNoiseGeneration.cpp" compile="1" resource="0"
+              file="Source/NoiseGenerationAlgorithms/PinkNoiseGeneration.cpp"/>
+        <FILE id="y69G6H" name="PinkNoiseGeneration.h" compile="0" resource="0"
+              file="Source/NoiseGenerationAlgorithms/PinkNoiseGeneration.h"/>
+        <FILE id="n8FQu5" name="WhiteNoiseGeneration.cpp" compile="1" resource="0"
+              file="Source/NoiseGenerationAlgorithms/WhiteNoiseGeneration.cpp"/>
+        <FILE id="YWBTL6" name="WhiteNoiseGeneration.h" compile="0" resource="0"
+              file="Source/NoiseGenerationAlgorithms/WhiteNoiseGeneration.h"/>
+      </GROUP>
+      <GROUP id="{5F774C75-75A5-895F-699E-8C08C1F5311F}" name="Components"/>
       <FILE id="ghwgsQ" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
       <FILE id="zfioL5" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
       <FILE id="qchfVb" name="MainComponent.cpp" compile="1" resource="0"

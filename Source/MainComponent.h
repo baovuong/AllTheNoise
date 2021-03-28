@@ -2,10 +2,10 @@
 
 #include <JuceHeader.h>
 
-#include "NoiseGeneration.h"
-#include "WhiteNoiseGeneration.h"
-#include "PinkNoiseGeneration.h"
-#include "BrownNoiseGeneration.h"
+#include "NoiseGenerationAlgorithms/NoiseGeneration.h"
+#include "NoiseGenerationAlgorithms/WhiteNoiseGeneration.h"
+#include "NoiseGenerationAlgorithms/PinkNoiseGeneration.h"
+#include "NoiseGenerationAlgorithms/BrownNoiseGeneration.h"
 
 //==============================================================================
 /*

@@ -1,5 +1,4 @@
 #include "MainComponent.h"
-#include "WhiteNoiseGeneration.h"
 
 //==============================================================================
 MainComponent::MainComponent()

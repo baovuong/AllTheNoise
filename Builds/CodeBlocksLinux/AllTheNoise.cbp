@@ -132,37 +132,37 @@
       <Add option="-Wno-strict-overflow"/>
     </Compiler>
     <Linker/>
-    <Unit filename="../../Source/BrownNoiseGeneration.cpp">
+    <Unit filename="../../Source/NoiseGenerationAlgorithms/BrownNoiseGeneration.cpp">
       <Option target="App | Debug"/>
       <Option target="App | Release"/>
     </Unit>
-    <Unit filename="../../Source/BrownNoiseGeneration.h">
-      <Option target="App | Debug"/>
-      <Option target="App | Release"/>
-      <Option compile="0"/>
-      <Option link="0"/>
-    </Unit>
-    <Unit filename="../../Source/PinkNoiseGeneration.h">
+    <Unit filename="../../Source/NoiseGenerationAlgorithms/BrownNoiseGeneration.h">
       <Option target="App | Debug"/>
       <Option target="App | Release"/>
       <Option compile="0"/>
       <Option link="0"/>
     </Unit>
-    <Unit filename="../../Source/PinkNoiseGeneration.cpp">
-      <Option target="App | Debug"/>
-      <Option target="App | Release"/>
-    </Unit>
-    <Unit filename="../../Source/WhiteNoiseGeneration.cpp">
-      <Option target="App | Debug"/>
-      <Option target="App | Release"/>
-    </Unit>
-    <Unit filename="../../Source/WhiteNoiseGeneration.h">
+    <Unit filename="../../Source/NoiseGenerationAlgorithms/NoiseGeneration.h">
       <Option target="App | Debug"/>
       <Option target="App | Release"/>
       <Option compile="0"/>
       <Option link="0"/>
     </Unit>
-    <Unit filename="../../Source/NoiseGeneration.h">
+    <Unit filename="../../Source/NoiseGenerationAlgorithms/PinkNoiseGeneration.cpp">
+      <Option target="App | Debug"/>
+      <Option target="App | Release"/>
+    </Unit>
+    <Unit filename="../../Source/NoiseGenerationAlgorithms/PinkNoiseGeneration.h">
+      <Option target="App | Debug"/>
+      <Option target="App | Release"/>
+      <Option compile="0"/>
+      <Option link="0"/>
+    </Unit>
+    <Unit filename="../../Source/NoiseGenerationAlgorithms/WhiteNoiseGeneration.cpp">
+      <Option target="App | Debug"/>
+      <Option target="App | Release"/>
+    </Unit>
+    <Unit filename="../../Source/NoiseGenerationAlgorithms/WhiteNoiseGeneration.h">
       <Option target="App | Debug"/>
       <Option target="App | Release"/>
       <Option compile="0"/>
