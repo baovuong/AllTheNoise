@@ -19,6 +19,7 @@ BrownNoisePanelComponent::BrownNoisePanelComponent()
 
     addAndMakeVisible(panelLabel);
     panelLabel.setText("Brown", juce::dontSendNotification);
+    panelLabel.setFont (juce::Font (32.0f, juce::Font::bold));
     panelLabel.setJustificationType(juce::Justification::left);
 
     addAndMakeVisible(stepSizeKnob);

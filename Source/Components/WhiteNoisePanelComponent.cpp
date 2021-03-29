@@ -18,7 +18,22 @@ WhiteNoisePanelComponent::WhiteNoisePanelComponent()
     // initialise any special settings that your component needs.
     addAndMakeVisible(panelLabel);
     panelLabel.setText("White", juce::dontSendNotification);
-    panelLabel.setJustificationType(juce::Justification::left);}
+    panelLabel.setFont (juce::Font (32.0f, juce::Font::bold));
+    panelLabel.setJustificationType(juce::Justification::left);
+
+    addAndMakeVisible(holdTimeKnob);
+    holdTimeKnob.setRange(0, 1);
+    holdTimeKnob.setValue(0.5);
+    holdTimeKnob.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
+    holdTimeKnob.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 100, 20);
+    holdTimeKnob.addListener(this);
+
+    addAndMakeVisible(holdTimeLabel);
+    holdTimeLabel.setText("Hold Time", juce::NotificationType::dontSendNotification);
+    holdTimeLabel.attachToComponent(&holdTimeKnob, false);
+    holdTimeLabel.setJustificationType(juce::Justification::centred);
+
+}
 
 WhiteNoisePanelComponent::~WhiteNoisePanelComponent()
 {
@@ -53,8 +68,20 @@ void WhiteNoisePanelComponent::resized()
     grid.templateColumns = { Track(Fr(1)), Track(Fr(1)) };
 
     grid.items = {
-        juce::GridItem(panelLabel).withMargin(juce::GridItem::Margin(0,0,0,20))
+        juce::GridItem(panelLabel).withMargin(juce::GridItem::Margin(0,0,0,20)),
+        juce::GridItem(holdTimeKnob).withMargin(juce::GridItem::Margin(22,0,8,0))
+
     };
 
     grid.performLayout(getLocalBounds());
+}
+
+void WhiteNoisePanelComponent::sliderValueChanged(juce::Slider* slider)
+{
+    sendChangeMessage();
+}
+
+float WhiteNoisePanelComponent::getHoldTime()
+{
+    return holdTimeKnob.getValue();
 }

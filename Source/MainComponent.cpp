@@ -19,6 +19,7 @@ MainComponent::MainComponent()
 
     pinkNoisePanel.addChangeListener(this);
     brownNoisePanel.addChangeListener(this);
+    whiteNoisePanel.addChangeListener(this);
 
     setSize (800, 600);
 
@@ -141,6 +142,11 @@ void MainComponent::changeListenerCallback(juce::ChangeBroadcaster* source)
         default:
             break;
         }
+    }
+    else if (source == &whiteNoisePanel)
+    {
+        // white noise parameters
+        whiteNoiseGeneration->holdTime(whiteNoisePanel.getHoldTime());
     }
     else if (source == &pinkNoisePanel)
     {

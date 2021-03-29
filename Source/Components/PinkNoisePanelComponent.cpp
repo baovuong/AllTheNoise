@@ -19,6 +19,7 @@ PinkNoisePanelComponent::PinkNoisePanelComponent()
 
     addAndMakeVisible(panelLabel);
     panelLabel.setText("Pink", juce::dontSendNotification);
+    panelLabel.setFont (juce::Font (32.0f, juce::Font::bold));
     panelLabel.setJustificationType(juce::Justification::left);
 
 

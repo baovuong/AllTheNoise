@@ -15,7 +15,7 @@
 //==============================================================================
 /*
 */
-class WhiteNoisePanelComponent  : public juce::Component
+class WhiteNoisePanelComponent  : public juce::Component, public juce::ChangeBroadcaster, public juce::Slider::Listener
 {
 public:
     WhiteNoisePanelComponent();
@@ -24,7 +24,15 @@ public:
     void paint (juce::Graphics&) override;
     void resized() override;
 
+    void sliderValueChanged(juce::Slider* slider) override;
+
+    float getHoldTime();
+
+
 private:
     juce::Label panelLabel;
+    juce::Label holdTimeLabel;
+
+    juce::Slider holdTimeKnob;
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (WhiteNoisePanelComponent)
 };

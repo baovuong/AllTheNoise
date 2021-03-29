@@ -12,9 +12,19 @@
 
 void WhiteNoiseGeneration::generate(juce::Random *random, float *buffer, int numSamples, float level)
 {
+    auto numHold = (int) ((numSamples / 4) * _holdTime);
+    auto currentNoise = random->nextFloat() * 2.0f - 1.0f;
+
     for (auto sample = 0; sample < numSamples; ++sample)
     {
-        auto noise = random->nextFloat() * 2.0f - 1.0f;
-        buffer[sample] = noise * level;
+        if (numHold == 0 ||  sample % numHold == 0)
+            currentNoise = random->nextFloat() * 2.0f - 1.0f;
+        buffer[sample] = currentNoise * level;
+
     }
+}
+
+void WhiteNoiseGeneration::holdTime(float value)
+{
+    _holdTime = value;
 }
