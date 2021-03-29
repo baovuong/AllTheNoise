@@ -7,9 +7,11 @@
 #include "NoiseGenerationAlgorithms/PinkNoiseGeneration.h"
 #include "NoiseGenerationAlgorithms/BrownNoiseGeneration.h"
 
+#include "Components/WhiteNoisePanelComponent.h"
 #include "Components/PinkNoisePanelComponent.h"
 #include "Components/BrownNoisePanelComponent.h"
 #include "Components/GlobalPanelComponent.h"
+#include "Components/GroupPanelComponent.h"
 
 //==============================================================================
 /*
@@ -43,8 +45,10 @@ private:
     juce::Random random;
 
     GlobalPanelComponent globalPanel;
+    GroupPanelComponent groupPanel;
     PinkNoisePanelComponent pinkNoisePanel;
     BrownNoisePanelComponent brownNoisePanel;
+    WhiteNoisePanelComponent whiteNoisePanel;
     
     NoiseGeneration *noiseGeneration;
     juce::SharedResourcePointer<WhiteNoiseGeneration> whiteNoiseGeneration;

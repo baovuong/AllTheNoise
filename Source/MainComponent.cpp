@@ -11,6 +11,15 @@ MainComponent::MainComponent()
     addAndMakeVisible(globalPanel);
     globalPanel.addChangeListener(this);
 
+    addAndMakeVisible(groupPanel);
+
+    groupPanel.addPanel(&whiteNoisePanel);
+    groupPanel.addPanel(&pinkNoisePanel);
+    groupPanel.addPanel(&brownNoisePanel);
+
+    pinkNoisePanel.addChangeListener(this);
+    brownNoisePanel.addChangeListener(this);
+
     setSize (800, 600);
 
     // Some platforms require permissions to open input channels so request that here
@@ -93,10 +102,10 @@ void MainComponent::resized()
     using Fr = juce::Grid::Fr;
 
     grid.templateRows = { Track(Fr(1)) };
-    grid.templateColumns = { Track(Fr(1)) };
+    grid.templateColumns = { Track(Fr(2)), Track(Fr(1)) };
 
     grid.items = { 
-        juce::GridItem(globalPanel)
+        juce::GridItem(groupPanel), juce::GridItem(globalPanel)
     };
     grid.performLayout(getLocalBounds());
 }

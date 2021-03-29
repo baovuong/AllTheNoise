@@ -25,5 +25,6 @@ public:
     void resized() override;
 
 private:
+    juce::Label panelLabel;
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (WhiteNoisePanelComponent)
 };

@@ -24,8 +24,9 @@ public:
     void paint (juce::Graphics&) override;
     void resized() override;
 
-    void addPanel(juce::Component& panel);
+    void addPanel(juce::Component *panel);
 
 private:
+    juce::OwnedArray<Component> panels;
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (GroupPanelComponent)
 };

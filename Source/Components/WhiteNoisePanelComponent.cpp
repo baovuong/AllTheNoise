@@ -16,8 +16,9 @@ WhiteNoisePanelComponent::WhiteNoisePanelComponent()
 {
     // In your constructor, you should add any child components, and
     // initialise any special settings that your component needs.
-
-}
+    addAndMakeVisible(panelLabel);
+    panelLabel.setText("White", juce::dontSendNotification);
+    panelLabel.setJustificationType(juce::Justification::left);}
 
 WhiteNoisePanelComponent::~WhiteNoisePanelComponent()
 {
@@ -36,11 +37,6 @@ void WhiteNoisePanelComponent::paint (juce::Graphics& g)
 
     g.setColour (juce::Colours::grey);
     g.drawRect (getLocalBounds(), 1);   // draw an outline around the component
-
-    g.setColour (juce::Colours::white);
-    g.setFont (14.0f);
-    g.drawText ("WhiteNoisePanelComponent", getLocalBounds(),
-                juce::Justification::centred, true);   // draw some placeholder text
 }
 
 void WhiteNoisePanelComponent::resized()
@@ -48,4 +44,17 @@ void WhiteNoisePanelComponent::resized()
     // This method is where you should set the bounds of any child
     // components that your component contains..
 
+    juce::Grid grid;
+
+    using Track = juce::Grid::TrackInfo;
+    using Fr = juce::Grid::Fr;
+
+    grid.templateRows = { Track(Fr(1)) };
+    grid.templateColumns = { Track(Fr(1)), Track(Fr(1)) };
+
+    grid.items = {
+        juce::GridItem(panelLabel).withMargin(juce::GridItem::Margin(0,0,0,20))
+    };
+
+    grid.performLayout(getLocalBounds());
 }

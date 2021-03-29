@@ -31,6 +31,9 @@ public:
 
 private:
     juce::Label panelLabel;
+    juce::Label stepSizeLabel;
+    juce::Label distributionLabel;
+    
     juce::Slider stepSizeKnob;
     juce::Slider distributionKnob;
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (BrownNoisePanelComponent)

@@ -14,9 +14,6 @@
 //==============================================================================
 GlobalPanelComponent::GlobalPanelComponent()
 {
-    // In your constructor, you should add any child components, and
-    // initialise any special settings that your component needs.
-
     addAndMakeVisible(volumeSlider);
     volumeSlider.setRange(-100, 0);
     volumeSlider.setValue (juce::Decibels::gainToDecibels (-50));
@@ -52,39 +49,25 @@ GlobalPanelComponent::~GlobalPanelComponent()
 
 void GlobalPanelComponent::paint (juce::Graphics& g)
 {
-    /* This demo code just fills the component's background and
-       draws some placeholder text to get you started.
+    g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));   // clear the background
 
-       You should replace everything in this method with your own
-       drawing code..
-    */
-
-    //g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));   // clear the background
-
-    //g.setColour (juce::Colours::grey);
-    //g.drawRect (getLocalBounds(), 1);   // draw an outline around the component
-
-    //g.setColour (juce::Colours::white);
-    //g.setFont (14.0f);
-    //g.drawText ("GlobalPanelComponent", getLocalBounds(),
-    //            juce::Justification::centred, true);   // draw some placeholder text
+    g.setColour (juce::Colours::grey);
+    g.drawRect (getLocalBounds(), 1);   // draw an outline around the component
 }
 
 void GlobalPanelComponent::resized()
 {
-    // This method is where you should set the bounds of any child
-    // components that your component contains..
     juce::Grid grid;
 
     using Track = juce::Grid::TrackInfo;
     using Fr = juce::Grid::Fr;
 
-    grid.templateRows = { Track(Fr(2)), Track(Fr(2)) };
+    grid.templateRows = { Track(Fr(1)), Track(Fr(1)) };
     grid.templateColumns = { Track(Fr(1)) };
 
     grid.items = {
-        juce::GridItem(colorTypeSlider),
-        juce::GridItem(volumeSlider)
+        juce::GridItem(colorTypeSlider).withMargin(juce::GridItem::Margin(25)),
+        juce::GridItem(volumeSlider).withMargin(juce::GridItem::Margin(25))
     };
 
     grid.performLayout(getLocalBounds());

@@ -19,18 +19,30 @@ BrownNoisePanelComponent::BrownNoisePanelComponent()
 
     addAndMakeVisible(panelLabel);
     panelLabel.setText("Brown", juce::dontSendNotification);
-    panelLabel.setJustificationType(juce::Justification::centred);
+    panelLabel.setJustificationType(juce::Justification::left);
 
     addAndMakeVisible(stepSizeKnob);
     stepSizeKnob.setRange(0, 1);
     stepSizeKnob.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
+    stepSizeKnob.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 100, 20);
     stepSizeKnob.addListener(this);
+
+    addAndMakeVisible(stepSizeLabel);
+    stepSizeLabel.setText("Step Size", juce::NotificationType::dontSendNotification);
+    stepSizeLabel.attachToComponent(&stepSizeKnob, false);
+    stepSizeLabel.setJustificationType(juce::Justification::centred);
 
     addAndMakeVisible(distributionKnob);
     distributionKnob.setRange(0, 1);
     distributionKnob.setValue(0.5);
     distributionKnob.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
+    distributionKnob.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 100, 20);
     distributionKnob.addListener(this);
+
+    addAndMakeVisible(distributionLabel);
+    distributionLabel.setText("Distribution", juce::NotificationType::dontSendNotification);
+    distributionLabel.attachToComponent(&distributionKnob, false);
+    distributionLabel.setJustificationType(juce::Justification::centred);
 }
 
 BrownNoisePanelComponent::~BrownNoisePanelComponent()
@@ -39,22 +51,10 @@ BrownNoisePanelComponent::~BrownNoisePanelComponent()
 
 void BrownNoisePanelComponent::paint (juce::Graphics& g)
 {
-    /* This demo code just fills the component's background and
-       draws some placeholder text to get you started.
+    g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));   // clear the background
 
-       You should replace everything in this method with your own
-       drawing code..
-    */
-
-    //g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));   // clear the background
-
-    //g.setColour (juce::Colours::grey);
-    //g.drawRect (getLocalBounds(), 1);   // draw an outline around the component
-
-    //g.setColour (juce::Colours::white);
-    //g.setFont (14.0f);
-    //g.drawText ("BrownNoisePanelComponent", getLocalBounds(),
-    //            juce::Justification::centred, true);   // draw some placeholder text
+    g.setColour (juce::Colours::grey);
+    g.drawRect (getLocalBounds(), 1);   // draw an outline around the component
 }
 
 void BrownNoisePanelComponent::resized()
@@ -70,7 +70,9 @@ void BrownNoisePanelComponent::resized()
     grid.templateColumns = { Track(Fr(1)), Track(Fr(1)), Track(Fr(1)) };
 
     grid.items = {
-        juce::GridItem(panelLabel), juce::GridItem(stepSizeKnob), juce::GridItem(distributionKnob)
+        juce::GridItem(panelLabel).withMargin(juce::GridItem::Margin(0,0,0,20)), 
+        juce::GridItem(stepSizeKnob).withMargin(juce::GridItem::Margin(22,0,8,0)), 
+        juce::GridItem(distributionKnob).withMargin(juce::GridItem::Margin(22,0,8,0))
     };
 
     grid.performLayout(getLocalBounds());

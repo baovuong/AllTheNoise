@@ -30,6 +30,8 @@ public:
 
 private:
     juce::Label panelLabel;
+    juce::Label numRowLabel;
+    
     juce::Slider numRowKnob;
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (PinkNoisePanelComponent)
 };

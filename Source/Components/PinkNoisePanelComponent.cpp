@@ -19,13 +19,19 @@ PinkNoisePanelComponent::PinkNoisePanelComponent()
 
     addAndMakeVisible(panelLabel);
     panelLabel.setText("Pink", juce::dontSendNotification);
-    panelLabel.setJustificationType(juce::Justification::centred);
+    panelLabel.setJustificationType(juce::Justification::left);
+
 
     addAndMakeVisible(numRowKnob);
     numRowKnob.setRange(1, 10, 1);
     numRowKnob.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
+    numRowKnob.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 100, 20);
     numRowKnob.addListener(this);
 
+    addAndMakeVisible(numRowLabel);
+    numRowLabel.setText("Noise Layers", juce::NotificationType::dontSendNotification);
+    numRowLabel.attachToComponent(&numRowKnob, false);
+    numRowLabel.setJustificationType(juce::Justification::centred);
 }
 
 PinkNoisePanelComponent::~PinkNoisePanelComponent()
@@ -34,22 +40,10 @@ PinkNoisePanelComponent::~PinkNoisePanelComponent()
 
 void PinkNoisePanelComponent::paint (juce::Graphics& g)
 {
-    /* This demo code just fills the component's background and
-       draws some placeholder text to get you started.
+    g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));   // clear the background
 
-       You should replace everything in this method with your own
-       drawing code..
-    */
-
-    // g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));   // clear the background
-
-    // g.setColour (juce::Colours::grey);
-    // g.drawRect (getLocalBounds(), 1);   // draw an outline around the component
-
-    // g.setColour (juce::Colours::white);
-    // g.setFont (14.0f);
-    // g.drawText ("PinkNoisePanelComponent", getLocalBounds(),
-    //             juce::Justification::centred, true);   // draw some placeholder text
+    g.setColour (juce::Colours::grey);
+    g.drawRect (getLocalBounds(), 1);   // draw an outline around the component
 }
 
 void PinkNoisePanelComponent::resized()
@@ -66,7 +60,8 @@ void PinkNoisePanelComponent::resized()
     grid.templateColumns = { Track(Fr(1)), Track(Fr(1)) };
 
     grid.items = {
-        juce::GridItem(panelLabel), juce::GridItem(numRowKnob)
+        juce::GridItem(panelLabel).withMargin(juce::GridItem::Margin(0,0,0,20)), 
+        juce::GridItem(numRowKnob).withMargin(juce::GridItem::Margin(22,0,8,0))
     };
 
     grid.performLayout(getLocalBounds());
