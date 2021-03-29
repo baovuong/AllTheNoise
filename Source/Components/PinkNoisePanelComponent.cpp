@@ -18,7 +18,13 @@ PinkNoisePanelComponent::PinkNoisePanelComponent()
     // initialise any special settings that your component needs.
 
     addAndMakeVisible(panelLabel);
+    panelLabel.setText("Pink", juce::dontSendNotification);
+    panelLabel.setJustificationType(juce::Justification::centred);
+
     addAndMakeVisible(numRowKnob);
+    numRowKnob.setRange(1, 10, 1);
+    numRowKnob.setSliderStyle(juce::Slider::SliderStyle::RotaryVerticalDrag);
+    numRowKnob.addListener(this);
 
 }
 
@@ -51,6 +57,27 @@ void PinkNoisePanelComponent::resized()
     // This method is where you should set the bounds of any child
     // components that your component contains..
 
-    
+    juce::Grid grid;
 
+    using Track = juce::Grid::TrackInfo;
+    using Fr = juce::Grid::Fr;
+
+    grid.templateRows = { Track(Fr(1)) };
+    grid.templateColumns = { Track(Fr(1)), Track(Fr(1)) };
+
+    grid.items = {
+        juce::GridItem(panelLabel), juce::GridItem(numRowKnob)
+    };
+
+    grid.performLayout(getLocalBounds());
+}
+
+int PinkNoisePanelComponent::getNumRows()
+{
+    return (int)numRowKnob.getValue();
+}
+
+void PinkNoisePanelComponent::sliderValueChanged(juce::Slider* slider)
+{
+    sendChangeMessage();
 }

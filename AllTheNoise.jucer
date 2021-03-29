@@ -32,6 +32,10 @@
               file="Source/Components/GlobalPanelComponent.cpp"/>
         <FILE id="SmiJ94" name="GlobalPanelComponent.h" compile="0" resource="0"
               file="Source/Components/GlobalPanelComponent.h"/>
+        <FILE id="M3Wv21" name="GroupPanelComponent.cpp" compile="1" resource="0"
+              file="Source/Components/GroupPanelComponent.cpp"/>
+        <FILE id="ZYrvLj" name="GroupPanelComponent.h" compile="0" resource="0"
+              file="Source/Components/GroupPanelComponent.h"/>
         <FILE id="ghHcrK" name="PinkNoisePanelComponent.cpp" compile="1" resource="0"
               file="Source/Components/PinkNoisePanelComponent.cpp"/>
         <FILE id="R67zAO" name="PinkNoisePanelComponent.h" compile="0" resource="0"

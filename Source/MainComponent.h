@@ -43,6 +43,8 @@ private:
     juce::Random random;
 
     GlobalPanelComponent globalPanel;
+    PinkNoisePanelComponent pinkNoisePanel;
+    BrownNoisePanelComponent brownNoisePanel;
     
     NoiseGeneration *noiseGeneration;
     juce::SharedResourcePointer<WhiteNoiseGeneration> whiteNoiseGeneration;

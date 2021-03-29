@@ -133,4 +133,15 @@ void MainComponent::changeListenerCallback(juce::ChangeBroadcaster* source)
             break;
         }
     }
+    else if (source == &pinkNoisePanel)
+    {
+        // update pink noise parameters
+        pinkNoiseGeneration->rowSize(pinkNoisePanel.getNumRows());
+    }
+    else if (source == &brownNoisePanel)
+    {
+        // update brown noise parameters
+        brownNoiseGeneration->dist(brownNoisePanel.getDistribution());
+        brownNoiseGeneration->step(brownNoisePanel.getStepSize());
+    }
 }

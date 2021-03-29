@@ -15,7 +15,7 @@
 //==============================================================================
 /*
 */
-class BrownNoisePanelComponent  : public juce::Component
+class BrownNoisePanelComponent  : public juce::Component, public juce::Slider::Listener, public juce::ChangeBroadcaster
 {
 public:
     BrownNoisePanelComponent();
@@ -24,6 +24,14 @@ public:
     void paint (juce::Graphics&) override;
     void resized() override;
 
+    void sliderValueChanged(juce::Slider* slider) override;
+
+    float getStepSize();
+    float getDistribution();
+
 private:
+    juce::Label panelLabel;
+    juce::Slider stepSizeKnob;
+    juce::Slider distributionKnob;
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (BrownNoisePanelComponent)
 };
